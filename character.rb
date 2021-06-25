@@ -9,7 +9,7 @@ class Character
     @defense = defense
   end
 
-  def disp_status(brave, monster)
+  def self.disp_status(brave, monster)
     puts <<~TEXT
     *=*=*=*=*=*=*=*=*=*=*
     【#{brave.name}】HP: #{brave.hp}

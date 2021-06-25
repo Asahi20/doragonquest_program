@@ -8,10 +8,10 @@ monster = Monster.new(name: "アークデーモン", hp: 210, offense: 140, defe
 
 
 monster.appear(monster)
-until brave.hp < 0 || monster.hp < 0 do
+until brave.hp <= 0 || monster.hp < 0 do
   brave.attack(brave, monster)
   break if monster.hp < 0
   monster.attack(monster, brave)
   break if brave.hp < 0
-  brave.disp_status(brave, monster)
+  Character.disp_status(monster, brave)
 end
